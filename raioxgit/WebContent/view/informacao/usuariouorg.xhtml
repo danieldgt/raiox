@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="../template/template.xhtml">
+	<ui:define name="title">
+        Permissões de Acesso
+    </ui:define>
+
+	<ui:define name="conteudo">
+		<h2>Usuario x UORG</h2>
+		<h:form id="form">
+
+			<p:growl id="growl" showDetail="true" life="4000" />
+
+
+			<p:panel>
+				<h:panelGrid columns="2">
+					<h:outputText value="Usuario: " />
+					<p:selectOneMenu id="cbMenu"
+						value="#{usuarioUorgController.usuario}" effect="fade"
+						converter="entityConverter" filter="true"
+						filterMatchMode="startsWith">
+						<f:selectItem itemLabel="" itemValue="" />
+						<f:selectItems value="#{usuarioUorgController.usuarios}" />
+						<f:ajax
+							listener="#{usuarioUorgController.carregaPermissoesUsuarioSelecionado}"
+							event="change" update="pickList" render="pickList" />
+					</p:selectOneMenu>
+
+
+				</h:panelGrid>
+				<br />
+				<br />
+				<p:pickList id="pickList" value="#{usuarioUorgController.UORGes}"
+					filterMatchMode="contains" showSourceFilter="true"
+					showTargetFilter="true" var="grupoUsuario"
+					itemLabel="#{grupoUsuario}" 
+					converter="entityConverter" itemValue="#{grupoUsuario}">
+
+					<f:facet name="sourceCaption">Grupos sem permissão</f:facet>
+					<f:facet name="targetCaption">Grupos com permissão</f:facet>
+				</p:pickList>
+
+				<p:commandButton id="enviarPermissoes" value="Enviar"
+					update=":form:growl, :form"
+					action="#{usuarioUorgController.finalizaEdicao}"
+					style="margin-top:5px" />
+			</p:panel>
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>

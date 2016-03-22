@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <title>Profile</title>
+
+    <!--Core CSS -->
+    <link href="resources/bs3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/bootstrap-reset.css" rel="stylesheet">
+    <link href="resources/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="resources/css/style.css" rel="stylesheet">
+    <link href="resources/css/style-responsive.css" rel="stylesheet" />
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]>
+    <script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<section id="container" >
+<!--header start-->
+<header class="header fixed-top clearfix">
+<!--logo start-->
+<div class="brand">
+
+    <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="">
+    </a>
+    
+    <div class="sidebar-toggle-box">
+        <div class="fa fa-bars"></div>
+    </div>
+</div>
+<!--logo end-->
+
+<div class="nav notify-row" id="top_menu">
+    <!--  notification start -->
+    <ul class="nav top-menu">
+        <!-- inbox dropdown end -->
+        <!-- notification dropdown start-->
+        <li id="header_notification_bar" class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <i class="fa fa-bell-o"></i>
+                <span class="badge bg-warning">2</span>
+            </a>
+            <ul class="dropdown-menu extended notification">
+                <li>
+                    <p>Notifications</p>
+                </li>
+                <li>
+                    <div class="alert alert-info clearfix">
+                        <span class="alert-icon"><i class="fa fa-info"></i></span>
+                        <div class="noti-info">
+                            <a href="#"> Complete seu Cadastro!</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="alert alert-success clearfix">
+                        <span class="alert-icon"><i class="fa fa-calendar"></i></span>
+                        <div class="noti-info">
+                            <a href="#">Vaga de estágio expirando<br> para uma vaga!</a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </li>
+        <!-- notification dropdown end -->
+    </ul>
+    <!--  notification end -->
+</div>
+<div class="top-nav clearfix">
+    <!--search & user info start-->
+    <ul class="nav pull-right top-menu">
+        <li>
+            <input type="text" class="form-control search" placeholder="Pesquisar">
+        </li>
+        <!-- user login dropdown start-->
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img alt="" src="images/avatar-empresa.jpg">
+                <span class="username">Nome da Empresa</span>
+                <b class="caret"></b>
+            </a>
+
+            <ul class="dropdown-menu extended logout">
+                <li><a href="#"><i class=" fa fa-suitcase"> </i>Perfil</a></li>
+                <li><a href="#"><i class="fa fa-cog"></i>Configurações</a></li>
+                <li><a href="login.html"><i class="fa fa-key"></i>Sair</a></li>
+            </ul>
+        </li>
+        <!-- user login dropdown end -->
+        <!-- <li>
+            <div class="toggle-right-box">
+                <div class="fa fa-bars"></div>
+            </div>
+        </li>
+        -->
+    </ul>
+    <!--search & user info end-->
+</div>
+</header>
+<!--header end-->
+<aside>
+    <div id="sidebar" class="nav-collapse">
+        <!-- sidebar menu start-->            <div class="leftside-navigation">
+            <ul class="sidebar-menu" id="nav-accordion">
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-laptop"></i>
+                    <span>Layouts</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="boxed_page.html">Boxed Page</a></li>
+                    <li><a href="horizontal_menu.html">Horizontal Menu</a></li>
+                    <li><a href="language_switch.html">Language Switch Bar</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-book"></i>
+                    <span>UI Elements</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="general.html">General</a></li>
+                    <li><a href="buttons.html">Buttons</a></li>
+<li><a href="typography.html">Typography</a></li>
+                    <li><a href="widget.html">Widget</a></li>
+                    <li><a href="slider.html">Slider</a></li>
+                    <li><a href="tree_view.html">Tree View</a></li>
+                    <li><a href="nestable.html">Nestable</a></li>
+                    <li><a href="grids.html">Grids</a></li>
+                    <li><a href="calendar.html">Calender</a></li>
+                    <li><a href="draggable_portlet.html">Draggable Portlet</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="fontawesome.html">
+                    <i class="fa fa-bullhorn"></i>
+                    <span>Fontawesome </span>
+                </a>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-th"></i>
+                    <span>Data Tables</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="basic_table.html">Basic Table</a></li>
+                    <li><a href="responsive_table.html">Responsive Table</a></li>
+                    <li><a href="dynamic_table.html">Dynamic Table</a></li>
+                    <li><a href="editable_table.html">Editable Table</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-tasks"></i>
+                    <span>Form Components</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="form_component.html">Form Elements</a></li>
+                    <li><a href="advanced_form.html">Advanced Components</a></li>
+                    <li><a href="form_wizard.html">Form Wizard</a></li>
+                    <li><a href="form_validation.html">Form Validation</a></li>
+                    <li><a href="file_upload.html">Muliple File Upload</a></li>
+                    
+                    <li><a href="dropzone.html">Dropzone</a></li>
+                    <li><a href="inline_editor.html">Inline Editor</a></li>
+
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-envelope"></i>
+                    <span>Mail </span>
+                </a>
+                <ul class="sub">
+                    <li><a href="mail.html">Inbox</a></li>
+                    <li><a href="mail_compose.html">Compose Mail</a></li>
+                    <li><a href="mail_view.html">View Mail</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class=" fa fa-bar-chart-o"></i>
+                    <span>Charts</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="morris.html">Morris</a></li>
+                    <li><a href="chartjs.html">Chartjs</a></li>
+                    <li><a href="flot_chart.html">Flot Charts</a></li>
+                    <li><a href="c3_chart.html">C3 Chart</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class=" fa fa-bar-chart-o"></i>
+                    <span>Maps</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="google_map.html">Google Map</a></li>
+                    <li><a href="vector_map.html">Vector Map</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;" class="active">
+                    <i class="fa fa-glass"></i>
+                    <span>Extra</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="blank.html">Blank Page</a></li>
+                    <li><a href="lock_screen.html">Lock Screen</a></li>
+                    <li class="active"><a href="profile.html">Profile</a></li>
+                    <li><a href="invoice.html">Invoice</a></li>
+                    <li><a href="pricing_table.html">Pricing Table</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>                    
+<li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
+                    <li><a href="500.html">500 Error</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="login.html">
+                    <i class="fa fa-user"></i>
+                    <span>Login Page</span>
+                </a>
+            </li>
+        </ul></div>        
+<!-- sidebar menu end-->
+    </div>
+</aside>
+<!--sidebar end-->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+        <!-- page start-->
+
+        <div class="row">
+            <div class="col-md-12">
+                <section class="panel">
+                    <div class="panel-body profile-information">
+                       <div class="col-md-3">
+                           <div class="profile-pic text-center">
+                               <img src="images/avatar-empresa.jpg" alt=""/>
+                           </div>
+                       </div>
+                       <div class="col-md-6">
+                           <div class="profile-desk">
+                               <h1>Nome Fantasia da Empresa</h1>
+                               <p>
+                               		Breve descrição da empresa aqui...                            
+
+                               </p>
+                           </div>
+                       </div>
+                       <div class="col-md-3">
+                           <div class="profile-statistics">
+                               <h4>Redes Sociais</h4>
+                               <p>Nossa Empresa nas Redes Sociais</p>
+                               <ul>
+                                   <li>
+                                       <a href="#">
+                                           <i class="fa fa-facebook"></i>
+                                       </a>
+                                   </li>
+                                   <li class="active">
+                                       <a href="#">
+                                           <i class="fa fa-twitter"></i>
+                                       </a>
+                                   </li>
+                                   <li>
+                                       <a href="#">
+                                           <i class="fa fa-google-plus"></i>
+                                       </a>
+                                   </li>
+                                   <li>
+                                       <a href="#">
+                                           <i class="fa fa-pinterest"></i>
+                                       </a>
+                                   </li>
+                               </ul>
+                           </div>
+                       </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <div class="col-md-12">
+                <section class="panel">
+                    <header class="panel-heading tab-bg-dark-navy-blue">
+                        <ul class="nav nav-tabs nav-justified ">
+                            <li class="active">
+                                <a data-toggle="tab" href="#sobre-nos" class="contact-map">
+                                    Sobre Nós
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#projetos">
+                                    Projetos e Atuação
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#estagiarios">
+                                    Nossos Estagiários
+                                </a>
+                            </li>
+                            <!--<li>
+                                <a data-toggle="tab" href="#colaboradores" class="contact-map">
+                                    Meus Contatos
+                                </a>
+                            </li>-->
+                        </ul>
+                    </header>
+                    <div class="panel-body">
+                        
+                        <div class="tab-content tasi-tab">
+                            <div id="sobre-nos" class="tab-pane active">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="prf-contacts">
+                                            <h2> <span><i class="fa fa-building-o"></i></span> localização </h2>
+                                            <div class="location-info">
+                                                <p><b>Endereço<br></b>
+                                                    Av. Domingos Olímpio, 331, Benfica <br>
+                                                    Fortaleza - Ceará<br>
+                                                    Brasil</p>
+
+                                                <p><b>Matriz da Empresa<br></b>
+                                                    São Bernardo do Campo - São Paulo<br>
+                                                    Brasil
+                                                </p>
+                                            </div>
+                                            <h2> <span><i class="fa fa-phone"></i></span> contatos</h2>
+                                            <div class="location-info">
+                                                <p><b>Telefone</b>: +55 85 3376 6284 <br>
+                                                   <b>Fax</b>: +55 85 8376 6284</p>
+                                                <p><b>Email</b>: minha.empresa@myemail.com<br>
+                                                   <b>Email</b>: minha.empresa2@myemail.com<br>
+                                                
+                                            </div>
+                                            <h2> <span><i class="fa fa-external-link"></i></span> Site e Redes Sociais</h2>
+                                            <div class="location-info">
+                                                <p>
+                                                	<b>Site</b>: <a href="http://www.minhaempresa.com.br"> http://www.minhaempresa.com.br </a><br>
+                                                    <b>Página no Facebook</b> : <a href="https://www.facebook.com/minhaempresa"> https://www.facebook.com/minhaempresa </a><br>
+                                                    <b>Twitter</b>  : <a href="https://twitter.com/minha_empresa"> https://twitter.com/minha_empresa </a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id="map-canvas"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="projetos" class="tab-pane">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="recent-act">
+                                            <h1>Atuação Recente</h1>
+                                            <div class="activity-icon green">
+                                                <i class="fa fa-code"></i>
+                                            </div>
+                                            <div class="activity-desk">
+                                                <h2 class = "red">Pro-vita</h2>
+                                                <p>Sistema gerenciador de Hospitais</p>
+                                            </div>
+                                            <div class="activity-icon green">
+                                                <i class="fa fa-coffee"></i>
+                                            </div>
+                                            <div class="activity-desk">
+                                                <h2 class="red">Hard Coding</h2>
+                                                <p>Curso de Java para Surdos</p>
+                                            </div>
+                                            <div class="activity-icon green">
+                                                <i class="fa fa-apple"></i>
+                                            </div>
+                                            <div class="activity-desk">
+                                                <h2 class="red">iFlip</h2>
+                                                <p>App de WebRadio</p>
+                                            </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="prf-box">
+                                            <h3 class="prf-border-head">Minhas Estatísticas</h3>
+                                            <div class=" wk-progress pf-status">
+                                                <div class="col-md-8 col-xs-8">Total de vagas já ofertadas</div>
+                                                <div class="col-md-4 col-xs-4">
+                                                    <strong>10</strong>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress pf-status">
+                                                <div class="col-md-8 col-xs-8">Seleções realizadas</div>
+                                                <div class="col-md-4 col-xs-4">
+                                                    <strong>50</strong>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress pf-status">
+                                                <div class="col-md-8 col-xs-8">Estagiários contratados</div>
+                                                <div class="col-md-4 col-xs-4">
+                                                    <strong>33</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="prf-box">
+                                            <h3 class="prf-border-head">Serviços Prestados</h3>
+                                            
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-empresa.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">Ivia Software</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-empresa.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">HLT Hardware Inc.</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-empresa.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">SEFIN</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-empresa.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm"> Shine Tech </span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="estagiarios" class="tab-pane">
+                                <div class="col-md-12">
+                                    <div class="col-md-6">
+                                       <div class="prf-box">
+                                            <h3 class="prf-border-head">Nossos Ex-Estagiários</h3>
+                                            
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/chat-avatar2.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">Ney Filho</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-mini-2.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">Sophia Marques</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-mini-3.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">Paulo Carneiro</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-mini.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm"> João Felipe </span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                       <div class="prf-box">
+                                            <h3 class="prf-border-head">Nossos Estagiários</h3>
+                                            
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-mini.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">Ronald Shoulder</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-mini-2.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">Maria Silva</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-mini-3.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">João Ferreira</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-mini-4.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm"> Cris Xavier </span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                      
+                            <div id="settings" class="tab-pane ">
+                                <div class="position-center">
+                                    <div class="prf-contacts sttng">
+                                        <h2>  Personal Information</h2>
+                                    </div>
+                                    <form role="form" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label"> Avatar</label>
+                                            <div class="col-lg-6">
+                                                <input type="file" id="exampleInputFile" class="file-pos">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Company</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="c-name" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Lives In</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="lives-in" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Country</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="country" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Description</label>
+                                            <div class="col-lg-10">
+                                                <textarea rows="10" cols="30" class="form-control" id="" name=""></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="prf-contacts sttng">
+                                        <h2> socail networks</h2>
+                                    </div>
+                                    <form role="form" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Facebook</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="fb-name" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Twitter</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="twitter" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Google plus</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="g-plus" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Flicr</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="flicr" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Youtube</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="youtube" class="form-control">
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                    <div class="prf-contacts sttng">
+                                        <h2>Contact</h2>
+                                    </div>
+                                    <form role="form" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Address 1</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="addr1" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Address 2</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="addr2" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Phone</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="phone" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Cell</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="cell" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Email</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="email" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Skype</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="skype" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-lg-offset-2 col-lg-10">
+                                                <button class="btn btn-primary" type="submit">Save</button>
+                                                <button class="btn btn-default" type="button">Cancel</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- page end-->
+        </section>
+    </section>
+    <!--main content end-->
+<!--right sidebar start-->
+<div class="right-sidebar">
+
+<div class="search-row">
+    <input type="text" placeholder="Pesquisar" class="form-control">
+</div>
+
+ <div class="right-stat-bar">
+<ul class="right-side-accordion">
+
+<li class="widget-collapsible">
+  	<a href="#" class="head widget-head red-bg active clearfix">
+        <span class="pull-left">Vagas Quentinhas</span>
+        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
+    </a>
+    <ul class="widget-container">
+        <li>
+        	<div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa fa-suitcase"></i>
+                </div>
+                
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        Agora
+                    </p>
+                    <p>
+                        <a href="#">PROGRAMADOR PHP </a><br>
+                        Ivia <br>
+                        4h/dia, Manhã, R$ 800,00
+                        
+                    </p>
+                </div>
+            </div>
+            
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa fa-suitcase"></i>
+                </div>
+                
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        Agora
+                    </p>
+                    <p>
+                        <a href="#">PROGRAMADOR JAVA </a><br>
+                        Ivia <br>
+                        4h/dia, Manhã, R$ 800,00
+                        
+                    </p>
+                </div>
+            </div>
+            
+            <div class="prog-row">
+                <div class=" user-thumb rsn-activity">
+                    <i class="fa fa-suitcase"></i>
+                </div>
+                
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        Agora
+                    </p>
+                    <p>
+                        <a href="#">PROGRAMADOR PYTHON </a><br>
+                        Ivia <br>
+                        4h/dia, Manhã, R$ 800,00
+                        
+                    </p>
+                </div>
+            </div>
+        	
+            <div class="prog-row">
+                <div class="side-graph-info">
+                    <h4>Novas Vagas</h4>
+                    <p>
+                        Você tem acesso <br>
+                        a 30 novas vagas!
+                    </p>
+                </div>
+                <div class="side-mini-graph">
+                    <div class="target-sell">
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</li>
+
+<li class="widget-collapsible">
+    <a href="#" class="head widget-head purple-bg active">
+        <span class="pull-left"> Top Mais </span>
+        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
+    </a>
+    <ul class="widget-container">
+        <li>
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa  fa-thumbs-o-up"></i>
+                </div>
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        #1
+                    </p>
+                    <p>
+                        <a href="#"> Gerente de Projetos </a>
+                        100 candidatos se insteressaram nessa vaga
+                    </p>
+                </div>
+            </div>
+            
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa  fa-thumbs-o-up"></i>
+                </div>
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        #2
+                    </p>
+                    <p>
+                        <a href="#"> DBA </a>
+                        60 candidatos se insteressaram nessa vaga
+                    </p>
+                </div>
+            </div>
+            
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa  fa-thumbs-o-up"></i>
+                </div>
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        #3
+                    </p>
+                    <p>
+                        <a href="#"> Programador Web </a>
+                        55 candidatos se insteressaram nessa vaga
+                    </p>
+                </div>
+            </div>
+            
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa  fa-thumbs-o-up"></i>
+                </div>
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        #4
+                    </p>
+                    <p>
+                        <a href="#"> Programador Java </a>
+                        45 candidatos se insteressaram nessa vaga
+                    </p>
+                </div>
+            </div>
+            
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa  fa-thumbs-o-up"></i>
+                </div>
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        #5
+                    </p>
+                    <p>
+                        <a href="#"> Programador Ruby </a>
+                        40 candidatos se insteressaram nessa vaga
+                    </p>
+                </div>
+            </div>            
+        </li>
+    </ul>
+</li>
+
+</ul>
+</div>
+</div>
+<!--right sidebar end-->
+
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+
+<!--Core js-->
+<script src="resources/js/jquery.js"></script>
+<script src="resources/bs3/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="resources/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="resources/js/jquery.scrollTo.min.js"></script>
+<script src="resources/js/jQuery-slimScroll-1.3.0/jquery.slimscroll.js"></script>
+<script src="resources/js/jquery.nicescroll.js"></script>
+<!--Easy Pie Chart-->
+<script src="resources/js/easypiechart/jquery.easypiechart.js"></script>
+<!--Sparkline Chart-->
+<script src="resources/js/sparkline/jquery.sparkline.js"></script>
+<!--jQuery Flot Chart-->
+<script src="resources/js/flot-chart/jquery.flot.js"></script>
+<script src="resources/js/flot-chart/jquery.flot.tooltip.min.js"></script>
+<script src="resources/js/flot-chart/jquery.flot.resize.js"></script>
+<script src="resources/js/flot-chart/jquery.flot.pie.resize.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&AMP;sensor=false"></script>
+
+<!--common script init for all pages-->
+<script src="resources/js/scripts.js"></script>
+<script>
+
+    //google map
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(-3.7378034, -38.5273801);
+        var mapOptions = {
+            zoom: 15,
+            scrollwheel: false,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Hello World!'
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+$('.contact-map').click(function(){
+
+    //google map in tab click initialize
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(-3.7378034, -38.5273801);
+        var mapOptions = {
+            zoom: 15,
+            scrollwheel: false,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Hello World!'
+        });
+    }
+    google.maps.event.addDomListener(window, 'click', initialize);
+});
+
+</script>
+</body>
+</html>

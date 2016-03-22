@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="../template/template.xhtml">
+	<ui:define name="conteudo">
+		<h2>Servidor</h2>
+		<h:form id="form">
+			<p:growl id="growlMessage" autoUpdate="true" showDetail="true"
+				showSummary="true" />
+
+			<h:inputHidden value="#{servidorController.servidor.id}" />
+			<h:inputHidden value="#{servidorController.cargo.id}" />
+			<h:inputHidden value="#{servidorController.uorgExercicio.id}" />
+			<h:inputHidden value="#{servidorController.uorgLotacao.id}" />
+
+			<p:panel>
+	  O órgão de lotação é aquele ao qual o servidor está administrativamente
+	  vinculado, em virtude da sua forma de ingresso no serviço público. O
+	  órgão de exercício é aquele no qual o servidor está efetivamente
+	  desempenhando suas atividades.
+	  
+	  http://www.planejamento.gov.br/acesso-a-informacao/recursos-humanos/
+	  servidores
+	 
+				<h:panelGrid columns="2">
+
+					<h:outputText value="Siape: " />
+					<p:inputText value="#{servidorController.servidor.siape}" />
+
+					<h:outputText value="Pessoa: " />
+					<p:selectOneMenu id="cbserv" style="width: 212px"
+						value="#{servidorController.pessoa}" effect="fade"
+						converter="entityConverter" filterMatchMode="contais" filter="true" >
+						<f:selectItem itemLabel="" itemValue="" />
+						<f:selectItems value="#{servidorController.pessoas}" />
+					</p:selectOneMenu>
+
+					<h:outputText value="UORG Exercicio: " />
+					<p:selectOneMenu id="cbTipoCandidato" style="width: 212px"
+						value="#{servidorController.uorgExercicio}" effect="fade"
+						converter="entityConverter" filterMatchMode="contais" filter="true" >
+						<f:selectItem itemLabel="" itemValue="" />
+						<f:selectItems value="#{servidorController.UORGs}" />
+					</p:selectOneMenu>
+
+					<h:outputText value="UORG Lotação: " />
+					<p:selectOneMenu id="cbTlot" style="width: 212px" 
+						value="#{servidorController.uorgLotacao}" effect="fade"
+						converter="entityConverter" filterMatchMode="contais" filter="true" >
+						<f:selectItem itemLabel="" itemValue="" />
+						<f:selectItems value="#{servidorController.UORGs}" />
+					</p:selectOneMenu>
+
+					<h:outputText value="Cargo: " />
+					<p:selectOneMenu id="cbexerc" style="width: 212px"
+						value="#{servidorController.cargo}" effect="fade"
+						converter="entityConverter" filterMatchMode="contais" filter="true" >
+						<f:selectItem itemLabel="" itemValue="" />
+						<f:selectItems value="#{servidorController.cargos}" />
+					</p:selectOneMenu>
+					
+					<h:outputText value="Data Ingresso serviço público: " />
+					<p:calendar value="#{servidorController.servidor.dtIngressoServicoPublico}" />
+
+					<h:outputText value="Data Ingresso Orgão: " />
+					<p:calendar value="#{servidorController.servidor.dtIngressoOrgao}" />
+
+
+					<p:commandButton value="Salvar"
+						action="#{servidorController.save()}"
+						styleClass="ui-priority-primary"
+						update=":form:growlMessage, :form " />
+
+					<p:commandButton value="Limpar"
+						action="#{servidorController.limpar()}"
+						update=":form:growlMessage, :form " />
+
+				</h:panelGrid>
+			</p:panel>
+
+			<p:dataTable id="dt" value="#{servidorController.servidors}" var="gu"
+				lazy="true" style="text-align: center;" paginator="true" rows="5"
+				currentPageReportTemplate="({currentPage} de {totalPages})"
+				paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+				rowsPerPageTemplate="5,10,15" paginatorPosition="bottom"
+				rowKey="#{gu.id}" paginatorAlwaysVisible="false"
+				emptyMessage="Nenhum servidor cadastrado." reflow="true">
+
+				<p:column headerText="Id" sortBy="#{gu.id}" filterBy="#{gu.id}"
+					filterMatchMode="contains">
+					<h:outputText value="#{gu.id}" />
+				</p:column>
+
+				<p:column headerText="Servidor" sortBy="#{gu.pessoa.nome}"
+					filterBy="#{gu.pessoa.nome}" filterMatchMode="contains">
+					<h:outputText value="#{gu.pessoa.nome}" />
+				</p:column>
+
+				<p:column headerText="Siape" sortBy="#{gu.siape}"
+					filterBy="#{gu.siape}" filterMatchMode="contains">
+					<h:outputText value="#{gu.siape}" />
+				</p:column>
+
+				<p:column headerText="Ações">
+					<p:commandButton action="#{servidorController.edit()}"
+						icon="ui-icon-pencil" update=":form:growlMessage, :form:dt, :form"
+						value="Editar">
+						<f:setPropertyActionListener value="#{gu}"
+							target="#{servidorController.servidor}" />
+					</p:commandButton>
+
+					<p:commandButton action="#{servidorController.delete()}"
+						icon="ui-icon-trash" update=":form:growlMessage, :form:dt, :form"
+						value="Excluir">
+						<f:setPropertyActionListener value="#{gu}"
+							target="#{servidorController.servidor}" />
+					</p:commandButton>
+				</p:column>
+
+
+				<f:facet name="footer">  
+			            #{servidorController.tamanhoLista()} Servidor(s) Cadastrado(s).  
+			        </f:facet>
+
+			</p:dataTable>
+		</h:form>
+
+	</ui:define>
+</ui:composition>

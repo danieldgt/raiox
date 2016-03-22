@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Copyright 2013-2014 J7 Soluções Inteligentes.
+	by Edivando Alves
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition>
+	<header class="header fixed-top clearfix">
+<!--logo start-->
+<div class="brand">
+
+    <a href="home.xhtml" class="logo">
+        <img src="images/logo.png" alt=""/>
+        <!-- <strong> Meu Estagio </strong> -->
+    </a>
+    <div class="sidebar-toggle-box">
+        <div class="fa fa-bars"></div>
+    </div>
+</div>
+<!--logo end-->
+
+<div class="nav notify-row" id="top_menu">
+    <!--  notification start -->
+    <ul class="nav top-menu">
+        <!-- settings start -->
+        <!-- inbox dropdown end -->
+        <!-- notification dropdown start-->
+        <li id="header_notification_bar" class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <i class="fa fa-bell-o"></i>
+                <span class="badge bg-warning">2</span>
+            </a>
+            <ul class="dropdown-menu extended notification">
+                <li>
+                    <p>Notifications</p>
+                </li>
+                <li>
+                    <div class="alert alert-info clearfix">
+                        <span class="alert-icon"><i class="fa fa-info"></i></span>
+                        <div class="noti-info">
+                            <a href="#"> Complete seu Cadastro!</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="alert alert-success clearfix">
+                        <span class="alert-icon"><i class="fa fa-calendar"></i></span>
+                        <div class="noti-info">
+                            <a href="#">Você foi selecionado <br/> para uma vaga!</a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </li>
+        <!-- notification dropdown end -->
+    </ul>
+    <!--  notification end -->
+</div>
+<div class="top-nav clearfix">
+    <!--search & user info start-->
+    <ul class="nav pull-right top-menu">
+        <li>
+            <input type="text" class="form-control search" placeholder="Pesquisar"/>
+        </li>
+        <!-- user login dropdown start-->
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img alt="" src="images/avatar1_small.jpg"/>
+                <span class="username">#{loginBean.usuario.cdEmail}</span>
+                <b class="caret"></b>
+            </a>
+
+            <ul class="dropdown-menu extended logout">
+                <li><a href="#"><i class=" fa fa-suitcase"> </i>Perfil</a></li>
+                <li><a href="/MeuEstagio/habilidade_estagio.xhtml"><i class="fa fa-cog"></i>Configurações</a></li>
+                <li><a href="javascript:logoff();"><i class="fa fa-key"></i>Sair</a></li>
+            </ul>
+        </li>
+        <!-- user login dropdown end -->
+        <li>
+            <div class="toggle-right-box">
+                <div class="fa fa-bars"></div>
+            </div>
+        </li>
+    </ul>
+    <!--search & user info end-->
+</div>
+</header>
+</ui:composition>
+</html>

@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <title>Profile</title>
+
+    <!--Core CSS -->
+    <link href="resources/bs3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/bootstrap-reset.css" rel="stylesheet">
+    <link href="resources/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="resources/css/style.css" rel="stylesheet">
+    <link href="resources/css/style-responsive.css" rel="stylesheet" />
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]>
+    <script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<section id="container" >
+<!--header start-->
+<header class="header fixed-top clearfix">
+<!--logo start-->
+<div class="brand">
+
+    <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="">
+    </a>
+    <div class="sidebar-toggle-box">
+        <div class="fa fa-bars"></div>
+    </div>
+</div>
+<!--logo end-->
+
+<div class="nav notify-row" id="top_menu">
+    <!--  notification start -->
+    <ul class="nav top-menu">
+        <!-- notification dropdown start-->
+        <li id="header_notification_bar" class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+
+                <i class="fa fa-bell-o"></i>
+                <span class="badge bg-warning">2</span>
+            </a>
+            <ul class="dropdown-menu extended notification">
+                <li>
+                    <p>Notifications</p>
+                </li>
+                <li>
+                    <div class="alert alert-info clearfix">
+                        <span class="alert-icon"><i class="fa fa-info"></i></span>
+                        <div class="noti-info">
+                            <a href="#"> Complete seu Cadastro!</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="alert alert-success clearfix">
+                        <span class="alert-icon"><i class="fa fa-calendar"></i></span>
+                        <div class="noti-info">
+                            <a href="#">Você foi selecionado <br> para uma vaga!</a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </li>
+        <!-- notification dropdown end -->
+    </ul>
+    <!--  notification end -->
+</div>
+<div class="top-nav clearfix">
+    <!--search & user info start-->
+    <ul class="nav pull-right top-menu">
+        <li>
+            <input type="text" class="form-control search" placeholder="Pesquisar">
+        </li>
+        <!-- user login dropdown start-->
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img alt="" src="images/avatar1_small.jpg">
+                <span class="username">Nome do Aluno</span>
+                <b class="caret"></b>
+            </a>
+
+            <ul class="dropdown-menu extended logout">
+                <li><a href="#"><i class=" fa fa-suitcase"> </i>Perfil</a></li>
+                <li><a href="#"><i class="fa fa-cog"></i>Configurações</a></li>
+                <li><a href="login.html"><i class="fa fa-key"></i>Sair</a></li>
+            </ul>
+        </li>
+        <!-- user login dropdown end -->
+        <li>
+            <div class="toggle-right-box">
+                <div class="fa fa-bars"></div>
+            </div>
+        </li>
+    </ul>
+    <!--search & user info end-->
+</div>
+</header>
+<!--header end-->
+<aside>
+    <div id="sidebar" class="nav-collapse">
+        <!-- sidebar menu start-->            <div class="leftside-navigation">
+            <ul class="sidebar-menu" id="nav-accordion">
+            <li>
+            	<a href="#">
+            		<i class="fa fa-home"></i>
+            		<span>Página Inicial</span>
+            	</a>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-briefcase"></i>
+                    <span>Vagas de Estágio</span>
+                </a>
+                <ul class="sub">
+                    <li>
+                    	<a href="#">
+                    		<i class="fa fa-heart-o"></i>
+                    		<span>Vagas em Aberto</span>
+                		</a> 
+                	</li>
+                	
+                    <li>
+                    	<a href="#">
+                    		<i class="fa fa-check-square-o"></i>
+                    		<span>Minhas Vagas</span>
+                		</a> 
+                	</li>
+					<li>
+                    	<a href="#">
+                    		<i class="fa fa-filter"></i>
+                    		<span>Filtros</span>
+                		</a> 
+                	</li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;">
+                    <i class="fa fa-gears"></i>
+                    <span>Configurações</span>
+                </a>
+                <ul class="sub">
+                    <li>
+                    	<a href="#">
+                    		<i class="fa fa-pencil-square-o"></i>
+                    		<span>Dados Pessoais</span>
+                		</a> 
+                	</li>
+                    <li>
+                    	<a href="#">
+                    		<i class="fa fa-puzzle-piece"></i>
+                    		<span>Habilidades</span>
+                		</a> 
+                	</li>
+					<li>
+                    	<a href="#">
+                    		<i class="fa fa-book"></i>
+                    		<span>Experiência Acadêmica</span>
+                		</a> 
+                	</li>
+					<li>
+                    	<a href="#">
+                    		<i class="fa fa-building-o"></i>
+                    		<span>Experiência Profissional</span>
+                		</a> 
+                	</li>
+                	<li>
+                    	<a href="#">
+                    		<i class="fa fa-link"></i>
+                    		<span>Contatos</span>
+                		</a> 
+                	</li>					
+                </ul>
+            </li>
+             <li>
+            	<a href="#">
+            		<i class="fa fa-times"></i>
+            		<span>Apagar Minha Conta</span>
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		<i class="fa fa-eye-slash"></i>
+            		<span>Política de Privacidade</span>
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		<i class="fa fa-smile-o"></i>
+            		<span>Sobre Nós</span>
+            	</a>
+            </li>
+        </ul></div>        
+<!-- sidebar menu end-->
+    </div>
+</aside>
+<!--sidebar end-->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+        <!-- page start-->
+
+        <div class="row">
+            <div class="col-md-12">
+                <section class="panel">
+                    <div class="panel-body profile-information">
+                       <div class="col-md-3">
+                           <div class="profile-pic text-center">
+                               <img src="images/lock_thumb.jpg" alt=""/>
+                           </div>
+                       </div>
+                       <div class="col-md-6">
+                           <div class="profile-desk">
+                               <h1>Nome do Aluno</h1>
+                               <span class="text-muted"> CURSO - INSTITUIÇÃO CAMPUS</span> <br>
+                               <p>
+                               		Breve descrição do aluno aqui...                            
+
+                               </p>
+                           </div>
+                       </div>
+                       <div class="col-md-3">
+                           <div class="profile-statistics">
+                               <h4>Redes Sociais</h4>
+                               <p>Encontre-me nas Redes Sociais</p>
+                               <ul>
+                                   <li>
+                                       <a href="#">
+                                           <i class="fa fa-facebook"></i>
+                                       </a>
+                                   </li>
+                                   <li class="active">
+                                       <a href="#">
+                                           <i class="fa fa-twitter"></i>
+                                       </a>
+                                   </li>
+                                   <li>
+                                       <a href="#">
+                                           <i class="fa fa-google-plus"></i>
+                                       </a>
+                                   </li>
+                                   <li>
+                                       <a href="#">
+                                           <i class="fa fa-pinterest"></i>
+                                       </a>
+                                   </li>
+                               </ul>
+                           </div>
+                       </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <div class="col-md-12">
+                <section class="panel">
+                    <header class="panel-heading tab-bg-dark-navy-blue">
+                        <ul class="nav nav-tabs nav-justified ">
+                            <li class="active">
+                                <a data-toggle="tab" href="#overview">
+                                    Sobre Mim
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#academic-history">
+                                    Experiência Acadêmica
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#job-history">
+                                    Experiência Profissional
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#contacts" class="contact-map">
+                                    Meus Contatos
+                                </a>
+                            </li>
+                        </ul>
+                    </header>
+                    <div class="panel-body">
+                        <div class="tab-content tasi-tab">
+                            <div id="overview" class="tab-pane active">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="recent-act">
+                                            <h1>Minhas Habilidades</h1>
+                                            <div class="activity-icon green">
+                                                <i class="fa fa-code"></i>
+                                            </div>
+                                            <div class="activity-desk">
+                                                <h2 class = "red">HTML 5</h2>
+                                                <p>Nível Intermediário</p>
+                                            </div>
+                                            <div class="activity-icon green">
+                                                <i class="fa fa-coffee"></i>
+                                            </div>
+                                            <div class="activity-desk">
+                                                <h2 class="red">Java</h2>
+                                                <p>Nível Certificado - London's Technology Institute</p>
+                                            </div>
+                                            <div class="activity-icon green">
+                                                <i class="fa fa-android"></i>
+                                            </div>
+                                            <div class="activity-desk">
+                                                <h2 class="red">Android</h2>
+                                                <p>Nível Intermediário</p>
+                                            </div>
+
+                                            <div class="activity-icon green">
+                                                <i class="fa fa-certificate"></i>
+                                            </div>
+                                            <div class="activity-desk">
+                                                <h2 class="red">Graduação em Engenharia de Computação</h2>
+                                                <p> IFCE - Fortaleza </p>
+                                            </div>
+
+                                            <div class="activity-icon green">
+                                                <i class="fa fa-apple"></i>
+                                            </div>
+                                            <div class="activity-desk">
+                                                <h2 class="red"> iOS</h2>
+                                                <p>Nível Avançado</p>
+                                            </div>
+                                            
+                                            <div class="activity-icon green">
+                                                <i class="fa fa-pencil"></i>
+                                            </div>
+                                            <div class="activity-desk">
+                                                <h2 class="red">Designer Gráfico</h2>
+                                                <p>Nível Certificado - FA7 - Fortaleza</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="prf-box">
+                                            <h3 class="prf-border-head">Minhas Estatísticas</h3>
+                                            <div class=" wk-progress pf-status">
+                                                <div class="col-md-8 col-xs-8">Vagas Curtidas</div>
+                                                <div class="col-md-4 col-xs-4">
+                                                    <strong>23545</strong>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress pf-status">
+                                                <div class="col-md-8 col-xs-8">Número de Seleções</div>
+                                                <div class="col-md-4 col-xs-4">
+                                                    <strong>235</strong>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress pf-status">
+                                                <div class="col-md-8 col-xs-8">Número de Contratações</div>
+                                                <div class="col-md-4 col-xs-4">
+                                                    <strong>10</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="prf-box">
+                                            <h3 class="prf-border-head">Locais em que trabalhei</h3>
+                                            
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-empresa.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">Ivia Software</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-empresa.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">HLT Hardware Inc.</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-empresa.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">SEFIN</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="images/avatar-empresa.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm"> Shine Tech </span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Perfil</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="job-history" class="tab-pane ">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="timeline-messages">
+                                            <h3>Take a Tour</h3>
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            13 January 2013
+                                                        </div>
+                                                        <div class="second bg-terques ">
+                                                            Join as Product Asst. Manager
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            10 February 2012
+                                                        </div>
+                                                        <div class="second bg-red">
+                                                            Completed Provition period and Appointed as a permanent Employee
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            2 January 2011
+                                                        </div>
+                                                        <div class="second bg-purple">
+                                                            Selected Employee of the Month
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            4 March 2010
+                                                        </div>
+                                                        <div class="second bg-green">
+                                                            Got Promotion and become area manager of California
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            3 April 2009
+                                                        </div>
+                                                        <div class="second bg-yellow">
+                                                            Selected the Best Employee of the Year 2013 and was awarded
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            23 May 2008
+                                                        </div>
+                                                        <div class="second bg-terques">
+                                                            Got Promotion and become Product Manager and was transper from Branch to Head Office. Lorem ipsum dolor sit amet
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            14 June 2007
+                                                        </div>
+                                                        <div class="second bg-blue">
+                                                            Height Sales scored and break all of the previous sales record ever in the company. Awarded
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            1 January 2006
+                                                        </div>
+                                                        <div class="second bg-green">
+                                                            Take 15 days leave for his wedding and Honeymoon & Christmas
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="academic-history" class="tab-pane ">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="timeline-messages">
+                                            <h3>Take a Tour</h3>
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            13 January 2013
+                                                        </div>
+                                                        <div class="second bg-green">
+                                                            Certificação Java EE<br> 
+                                                            (London Institute of Technology)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            10 February 2012
+                                                        </div>
+                                                        <div class="second bg-green ">
+                                                            Especialização em Computação Paralela de Alto Desempenho <br> 
+                                                            (Souht Nottingham University)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            2 January 2011
+                                                        </div>
+                                                        <div class="second bg-green">
+                                                            Superior em Ciências da Computação <br>
+                                                            Universidade Federal do Ceará
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            4 March 2010
+                                                        </div>
+                                                        <div class="second bg-green">
+                                                            Técnico em Telecomunicações <br>
+                                                            IFCE - Fortaleza
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="contacts" class="tab-pane ">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="prf-contacts">
+                                            <h2> <span><i class="fa fa-home"></i></span> meu cantinho</h2>
+                                            <div class="location-info">
+                                                <b><p>Cidade Atual<br></b>
+                                                    Fortaleza - Ceará<br>
+                                                    Brasil</p>
+                                                <b><p>Cidade Natal<br></b>
+                                                    São Bernardo do Campo - São Paulo<br>
+                                                    Brasil</p>
+                                            </div>
+                                            <h2> <span><i class="fa fa-phone"></i></span> contatos</h2>
+                                            <div class="location-info">
+                                                <p><b>Telefone Residencial</b>: +55 85 3376 6284 <br>
+                                                   <b>Telefone Celular</b>: +55 85 8376 6284</p>
+                                                <p><b>Email</b>: andy.adesh@myemail.com<br>
+                                                   <b>Skype</b>: andy.adesh</p>
+                                                <p>
+                                                    <b>Facebook</b>	: https://www.facebook.com/andyadesh <br>
+                                                    <b>Twitter</b>	: https://twitter.com/andy_adesh
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id="map-canvas"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="settings" class="tab-pane ">
+                                <div class="position-center">
+                                    <div class="prf-contacts sttng">
+                                        <h2>  Personal Information</h2>
+                                    </div>
+                                    <form role="form" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label"> Avatar</label>
+                                            <div class="col-lg-6">
+                                                <input type="file" id="exampleInputFile" class="file-pos">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Company</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="c-name" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Lives In</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="lives-in" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Country</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="country" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Description</label>
+                                            <div class="col-lg-10">
+                                                <textarea rows="10" cols="30" class="form-control" id="" name=""></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="prf-contacts sttng">
+                                        <h2> socail networks</h2>
+                                    </div>
+                                    <form role="form" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Facebook</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="fb-name" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Twitter</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="twitter" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Google plus</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="g-plus" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Flicr</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="flicr" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Youtube</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="youtube" class="form-control">
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                    <div class="prf-contacts sttng">
+                                        <h2>Contact</h2>
+                                    </div>
+                                    <form role="form" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Address 1</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="addr1" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Address 2</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="addr2" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Phone</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="phone" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Cell</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="cell" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Email</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="email" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Skype</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="skype" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-lg-offset-2 col-lg-10">
+                                                <button class="btn btn-primary" type="submit">Save</button>
+                                                <button class="btn btn-default" type="button">Cancel</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- page end-->
+        </section>
+    </section>
+    <!--main content end-->
+<!--right sidebar start-->
+<div class="right-sidebar">
+
+<div class="search-row">
+    <input type="text" placeholder="Pesquisar" class="form-control">
+</div>
+
+<div class="right-stat-bar">
+<ul class="right-side-accordion">
+
+<li class="widget-collapsible">
+  	<a href="#" class="head widget-head red-bg active clearfix">
+        <span class="pull-left">Vagas Quentinhas</span>
+        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
+    </a>
+    <ul class="widget-container">
+        <li>
+        	<div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa fa-suitcase"></i>
+                </div>
+                
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        Agora
+                    </p>
+                    <p>
+                        <a href="#">PROGRAMADOR PHP </a><br>
+                        Ivia <br>
+                        4h/dia, Manhã, R$ 800,00
+                        
+                    </p>
+                </div>
+            </div>
+            
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa fa-suitcase"></i>
+                </div>
+                
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        Agora
+                    </p>
+                    <p>
+                        <a href="#">PROGRAMADOR JAVA </a><br>
+                        Ivia <br>
+                        4h/dia, Manhã, R$ 800,00
+                        
+                    </p>
+                </div>
+            </div>
+            
+            <div class="prog-row">
+                <div class=" user-thumb rsn-activity">
+                    <i class="fa fa-suitcase"></i>
+                </div>
+                
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        Agora
+                    </p>
+                    <p>
+                        <a href="#">PROGRAMADOR PYTHON </a><br>
+                        Ivia <br>
+                        4h/dia, Manhã, R$ 800,00
+                        
+                    </p>
+                </div>
+            </div>
+        	
+            <div class="prog-row">
+                <div class="side-graph-info">
+                    <h4>Novas Vagas</h4>
+                    <p>
+                        Você tem acesso <br>
+                        a 30 novas vagas!
+                    </p>
+                </div>
+                <div class="side-mini-graph">
+                    <div class="target-sell">
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</li>
+
+<li class="widget-collapsible">
+    <a href="#" class="head widget-head purple-bg active">
+        <span class="pull-left"> Top Mais </span>
+        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
+    </a>
+    <ul class="widget-container">
+        <li>
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa  fa-thumbs-o-up"></i>
+                </div>
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        #1
+                    </p>
+                    <p>
+                        <a href="#"> Gerente de Projetos </a>
+                        100 candidatos se insteressaram nessa vaga
+                    </p>
+                </div>
+            </div>
+            
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa  fa-thumbs-o-up"></i>
+                </div>
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        #2
+                    </p>
+                    <p>
+                        <a href="#"> DBA </a>
+                        60 candidatos se insteressaram nessa vaga
+                    </p>
+                </div>
+            </div>
+            
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa  fa-thumbs-o-up"></i>
+                </div>
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        #3
+                    </p>
+                    <p>
+                        <a href="#"> Programador Web </a>
+                        55 candidatos se insteressaram nessa vaga
+                    </p>
+                </div>
+            </div>
+            
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa  fa-thumbs-o-up"></i>
+                </div>
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        #4
+                    </p>
+                    <p>
+                        <a href="#"> Programador Java </a>
+                        45 candidatos se insteressaram nessa vaga
+                    </p>
+                </div>
+            </div>
+            
+            <div class="prog-row">
+                <div class="user-thumb rsn-activity">
+                    <i class="fa  fa-thumbs-o-up"></i>
+                </div>
+                <div class="rsn-details ">
+                    <p class="text-muted">
+                        #5
+                    </p>
+                    <p>
+                        <a href="#"> Programador Ruby </a>
+                        40 candidatos se insteressaram nessa vaga
+                    </p>
+                </div>
+            </div>            
+        </li>
+    </ul>
+</li>
+
+</ul>
+</div>
+</div>
+<!--right sidebar end-->
+
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+
+<!--Core js-->
+<script src="resources/js/jquery.js"></script>
+<script src="resources/bs3/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="resources/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="resources/js/jquery.scrollTo.min.js"></script>
+<script src="resources/js/jQuery-slimScroll-1.3.0/jquery.slimscroll.js"></script>
+<script src="resources/js/jquery.nicescroll.js"></script>
+<!--Easy Pie Chart-->
+<script src="resources/js/easypiechart/jquery.easypiechart.js"></script>
+<!--Sparkline Chart-->
+<script src="resources/js/sparkline/jquery.sparkline.js"></script>
+<!--jQuery Flot Chart-->
+<script src="resources/js/flot-chart/jquery.flot.js"></script>
+<script src="resources/js/flot-chart/jquery.flot.tooltip.min.js"></script>
+<script src="resources/js/flot-chart/jquery.flot.resize.js"></script>
+<script src="resources/js/flot-chart/jquery.flot.pie.resize.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&AMP;sensor=false"></script>
+
+<!--common script init for all pages-->
+<script src="resources/js/scripts.js"></script>
+<script>
+
+    //google map
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(-3.743770114667831, -38.53592304206541);
+        var mapOptions = {
+            zoom: 15,
+            scrollwheel: false,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Hello World!'
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+$('.contact-map').click(function(){
+
+    //google map in tab click initialize
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(-3.743770114667831, -38.53592304206541);
+        var mapOptions = {
+            zoom: 18,
+            scrollwheel: false,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        }
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Hello World!'
+        });
+    }
+    google.maps.event.addDomListener(window, 'click', initialize);
+});
+
+</script>
+</body>
+</html>

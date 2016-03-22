@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="j7" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<class>br.com.raiox.model.Auditoria</class>
+		<class>br.com.raiox.model.Campus</class>
+		<class>br.com.raiox.model.Candidato</class>
+		<class>br.com.raiox.model.Cargo</class>
+		<class>br.com.raiox.model.Eleicao</class>
+		<class>br.com.raiox.model.IntencaoVoto</class>
+		<class>br.com.raiox.model.Pessoa</class>
+		<class>br.com.raiox.model.Servidor</class>
+		<class>br.com.raiox.model.TipoCandidato</class>
+		<class>br.com.raiox.model.TipoUsuario</class>
+		<class>br.com.raiox.model.UORG</class>
+		<class>br.com.raiox.model.Usuario</class>
+		
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="false" />
+			<property name="hibernate.connection.url"
+				value="jdbc:postgresql://127.0.0.1:5432/alimentador?autoReconnect=true" />
+			<property name="javax.persistence.jdbc.user" value="postgres" />
+			<property name="javax.persistence.jdbc.password" value="root" />
+
+			<property name="hibernate.ejb.interceptor" value="br.com.raiox.filter.AuditoriaListener" />
+		</properties>
+	</persistence-unit>
+
+	<persistence-unit name="audit" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="false" />
+			<property name="hibernate.connection.url"
+				value="jdbc:postgresql://127.0.0.1:5432/alimentador?autoReconnect=true" />
+			<property name="javax.persistence.jdbc.user" value="postgres" />
+			<property name="javax.persistence.jdbc.password" value="root" />
+
+		</properties>
+
+	</persistence-unit>
+</persistence>

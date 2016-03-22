@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Xxxxxxxxx</title>
+
+
+
+	<f:facet name="first">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="description" content="" />
+		<meta name="author" content="ET" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+	</f:facet>
+
+	<link rel="stylesheet" href="#{request.contextPath}/css/demo.css" />
+	<link rel="stylesheet"
+		href="#{request.contextPath}/css/jquery.mmenu.all.css" />
+
+	<link rel="stylesheet" href="#{request.contextPath}/css/reset.css" />
+	<link rel="stylesheet" href="#{request.contextPath}/css/style.css" />
+
+	<script type="text/javascript"
+		src="#{request.contextPath}/jquery1.7.2/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="#{request.contextPath}/js/jquery.mmenu.all.min.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			$('nav#menu')
+					.mmenu(
+							{
+								extensions : [ 'effect-slide-menu',
+										'pageshadow' ],
+								searchfield : true,
+								counters : true,
+								navbar : {
+									title : 'Xxxxxxxx'
+								},
+								navbars : [
+										{
+											position : 'top',
+											content : [ 'Buscar' ]
+										},
+										{
+											position : 'top',
+											content : [ 'prev', 'title',
+													'close' ]
+										},
+										{
+											position : 'bottom',
+											content : [ '<a href="http://google.com.br" target="_blank">Raio X</a>' ]
+										} ]
+							});
+		});
+	</script>
+
+</h:head>
+<h:body>
+	<style type="text/css">
+.ui-widget {
+	font-size: 12px !important;
+}
+</style>
+	<p:growl id="messages" />
+	<p:layout fullPage="true">
+
+
+		<p:layoutUnit position="north" size="40" resizable="false"
+			closable="false" collapsible="true">
+			<div class="avatarOn">
+				<img
+					src="#{request.contextPath}/resources/images/iconpopmania-179.jpg" />
+			</div>
+
+			<h:form>
+			Hi, <p:outputLabel value="#{usuarioLogado.usuario.pessoa.nome} " />
+				<p:commandButton id="mycommandLinkID" type="submit"
+					styleClass="btn btn-lg btn-login btn-block" value="Sair"
+					action="#{usuarioLogado.doLogout}" />
+			</h:form>
+		</p:layoutUnit>
+
+		<!-- <p:layoutUnit position="west" size="200px" resizable="true"
+			closable="false" collapsible="true" effect="drop">
+			<ui:include src="/view/template/menu.xhtml" />
+		</p:layoutUnit> -->
+		<p:layoutUnit position="center">
+
+			<div id="page">
+				<div class="header">
+					<a href="#menu"></a>
+				</div>
+				<div class="content">
+					<ui:insert name="conteudo" />
+				</div>
+				<nav id="menu">
+				<ul>
+					<li><a
+						href="#{request.contextPath}/view/home.xhtml?facesRedirect=true">Home</a></li>
+					<li><a href="#">Cadastro Sistema</a>
+						<ul>
+							<li><a
+								href="#{request.contextPath}/view/crud/pessoa.xhtml?facesRedirect=true">Pessoa</a></li>
+							<li><a
+								href="#{request.contextPath}/view/crud/usuario.xhtml?facesRedirect=true">Usuário</a></li>
+							<li><a
+								href="#{request.contextPath}/view/crud/tipousuario.xhtml?facesRedirect=true">Tipo
+									Usuário</a></li>
+							<li><a
+								href="#{request.contextPath}/view/informacao/usuariouorg.xhtml?facesRedirect=true">Usuário x 
+								UORG</a></li>
+
+						</ul></li>
+					<li><a href="#">Estrutura Instituição</a>
+						<ul>
+							<li><a
+								href="#{request.contextPath}/view/crud/campus.xhtml?facesRedirect=true">Campus</a></li>
+							<li><a
+								href="#{request.contextPath}/view/crud/uorg.xhtml?facesRedirect=true">UORG</a></li>
+							<li><a
+								href="#{request.contextPath}/view/crud/cargo.xhtml?facesRedirect=true">Cargo</a></li>
+							<li><a
+								href="#{request.contextPath}/view/crud/servidor.xhtml?facesRedirect=true">Servidor</a></li>
+						</ul></li>
+					<li><a href="#">Contexto de Uso</a>
+						<ul>
+							<li><a
+								href="#{request.contextPath}/view/crud/tipocandidato.xhtml?facesRedirect=true">Tipo
+									Candidato</a></li>
+							<li><a
+								href="#{request.contextPath}/view/crud/eleicao.xhtml?facesRedirect=true">Eleição</a></li>
+							<li><a
+								href="#{request.contextPath}/view/crud/candidato.xhtml?facesRedirect=true">Candidato</a></li>
+							<li><a
+								href="#{request.contextPath}/view/informacao/grupoGestor.xhtml?facesRedirect=true">GrupoGestor</a></li>
+							<li><a
+								href="#{request.contextPath}/view/informacao/informacao.xhtml?facesRedirect=true">Informação</a></li>
+						</ul></li>
+					<li><a href="#">Nossos</a></li>
+				</ul>
+				<li><a href="#">Contato</a></li>
+				</nav>
+			</div>
+
+			<p:layoutUnit position="south" size="25" resizable="false"
+				closable="false" collapsible="true">
+				<ui:include src="/view/template/rodape.xhtml" />
+			</p:layoutUnit>
+
+		</p:layoutUnit>
+	</p:layout>
+	<p:ajaxStatus
+		style="width:64px;height:64px;position:fixed;right:20px;bottom:30px">
+		<f:facet name="start">
+			<h:graphicImage library="images" name="loading.gif" />
+		</f:facet>
+
+		<f:facet name="complete">
+			<h:outputText value="" />
+		</f:facet>
+	</p:ajaxStatus>
+
+</h:body>
+</html>

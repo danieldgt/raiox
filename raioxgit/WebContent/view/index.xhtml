@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+	<h:head>
+		<f:facet name="first">
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width" />
+			<meta name="mobile-web-app-capable" content="yes" />
+			<meta name="description" content="" />
+			<meta name="author" content="ET" />
+			<meta name="mobile-web-app-capable" content="yes" />
+			<meta name="apple-mobile-web-app-capable" content="yes" />
+		</f:facet>
+
+		<meta charset="UTF-8" />
+		<title>Login</title>
+
+		<link rel="stylesheet" href="#{request.contextPath}/css/reset.css" />
+
+		<link rel="stylesheet" href="#{request.contextPath}/css/style.css" />
+	</h:head>
+
+	<h:body>
+
+		<h:form>
+			<p:growl id="growlMessage" autoUpdate="true" showDetail="true"
+				showSummary="true" />
+			<div class="wrap">
+				<div class="avatar">
+					<img
+						src="#{request.contextPath}/resource/image/iconpopmania-179.jpg" />
+				</div>
+				OLÁ! <br /> <br /> <br />
+				<p:commandButton id="mycommandLinkID" type="submit"
+					styleClass="btn btn-lg btn-login btn-block" value="Login"
+					action="#{usuarioLogado.doLogout}" />
+			</div>
+		</h:form>
+
+		<script src="js/index.js"></script>
+
+	</h:body>
+
+</f:view>
+
+</html>

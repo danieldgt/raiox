@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Copyright 2013-2014 J7 Soluções Inteligentes.
+	by Edivando Alves
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition>
+	<aside>
+	    <div id="sidebar" class="nav-collapse">
+	        <div class="leftside-navigation">
+	        	<!-- Menu Administrador -->
+	        	<p:outputPanel rendered="#{loginBean.usuario.tipoUsuario.id eq 1}">
+	        		<ul class="sidebar-menu" id="nav-accordion">
+						<li>
+			                <a href="#">
+			                    <i class="fa fa-user"></i>
+			                    <span>Estágiários</span>
+			                </a>
+			            </li>
+			           	<li>
+			                <a href="estagio.xhtml">
+			                    <i class="fa fa-user"></i>
+			                    <span>Ofertas de Estágio</span>
+			                </a>
+			            </li>
+			            <li>
+			                <a href="empresa.xhtml">
+			                    <i class="fa fa-user"></i>
+			                    <span>Empresas</span>
+			                </a>
+			            </li>
+		        	</ul>
+	        	</p:outputPanel>
+	        	
+	        	<!-- Menu Empresa -->
+	        	<p:outputPanel rendered="#{loginBean.usuario.tipoUsuario.id eq 2}">
+	        		<ul class="sidebar-menu" id="nav-accordion">
+			            <li>
+			                <a href="#">
+			                    <i class="fa fa-user"></i>
+			                    <span>Ofertar Estágio</span>
+			                </a>
+			            </li>
+			            <li>
+			                <a href="#">
+			                    <i class="fa fa-user"></i>
+			                    <span>Pesquisar Estagiários</span>
+			                </a>
+			            </li>
+		        	</ul>
+	        	</p:outputPanel>
+	        	
+	        	<!-- Menu Estagiario -->
+	        	<p:outputPanel rendered="#{loginBean.usuario.tipoUsuario.id eq 3}">
+	        		<ul class="sidebar-menu" id="nav-accordion">
+			            <li>
+			            	<a href="../MeuEstagio/home.xhtml">
+			            		<i class="fa fa-home"></i>
+			            		<span>Página Inicial</span>
+			            	</a>
+			            </li>
+			            <li>
+			            	<a href="../MeuEstagio/perfil_aluno.xhtml">
+			            		<i class="fa fa-user"></i>
+			            		<span>Meu Perfil</span>
+			            	</a>
+			            </li>
+			            <li class="sub-menu">
+			                <a href="javascript:;">
+			                    <i class="fa fa-briefcase"></i>
+			                    <span>Vagas de Estágio</span>
+			                </a>
+			                <ul class="sub">
+			                    <li>
+			                    	<a href="#">
+			                    		<i class="fa fa-heart-o"></i>
+			                    		<span>Vagas em Aberto</span>
+			                		</a> 
+			                	</li>
+			                	
+			                    <li>
+			                    	<a href="#">
+			                    		<i class="fa fa-check-square-o"></i>
+			                    		<span>Minhas Vagas</span>
+			                		</a> 
+			                	</li>
+								<li>
+			                    	<a href="#">
+			                    		<i class="fa fa-filter"></i>
+			                    		<span>Filtros</span>
+			                		</a> 
+			                	</li>
+			                </ul>
+			            </li>
+			            <li class="sub-menu">
+			                <a href="javascript:;">
+			                    <i class="fa fa-gears"></i>
+			                    <span>Configurações</span>
+			                </a>
+			                <ul class="sub">
+			                    <li>
+			                    	<a href="#">
+			                    		<i class="fa fa-pencil-square-o"></i>
+			                    		<span>Dados Pessoais</span>
+			                		</a> 
+			                	</li>
+			                    <li>
+			                    	<a href="#">
+			                    		<i class="fa fa-puzzle-piece"></i>
+			                    		<span>Habilidades</span>
+			                		</a> 
+			                	</li>
+								<li>
+			                    	<a href="#">
+			                    		<i class="fa fa-book"></i>
+			                    		<span>Experiência Acadêmica</span>
+			                		</a> 
+			                	</li>
+								<li>
+			                    	<a href="#">
+			                    		<i class="fa fa-building-o"></i>
+			                    		<span>Experiência Profissional</span>
+			                		</a> 
+			                	</li>
+			                	<li>
+			                    	<a href="#">
+			                    		<i class="fa fa-link"></i>
+			                    		<span>Contatos</span>
+			                		</a> 
+			                	</li>					
+			                </ul>
+			            </li>
+			             <li>
+			            	<a href="#">
+			            		<i class="fa fa-times"></i>
+			            		<span>Apagar Minha Conta</span>
+			            	</a>
+			            </li>
+			            <li>
+			            	<a href="#">
+			            		<i class="fa fa-eye-slash"></i>
+			            		<span>Política de Privacidade</span>
+			            	</a>
+			            </li>
+			            <li>
+			            	<a href="#">
+			            		<i class="fa fa-smile-o"></i>
+			            		<span>Sobre Nós</span>
+			            	</a>
+			            </li>
+			        </ul>
+	        	</p:outputPanel>
+	        
+	            
+	       </div>        
+	    </div>
+	</aside>
+</ui:composition>
+</html>

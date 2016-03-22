@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="../template/template.xhtml">
+	<ui:define name="conteudo">
+		<h2>Dados</h2>
+		<h:form id="form">
+			<p:growl id="growlMessage" autoUpdate="true" showDetail="true"
+				showSummary="true" />
+
+			<p:panel>
+				<h:panelGrid columns="2">
+
+					<h:outputText value="UORG" />
+					<p:selectOneMenu id="cbCandidato" style="width: 212px"
+						value="#{informacaoVotoController.uorg}" effect="fade"
+						converter="entityConverter" filterMatchMode="contais"
+						filter="true">
+						<f:selectItem itemLabel="" itemValue="" />
+						<f:selectItems value="#{informacaoVotoController.uorgs}" />
+					</p:selectOneMenu>
+
+					<p:commandButton value="Listar"
+						action="#{informacaoVotoController.listarServidoresPorUorg()}"
+						styleClass="ui-priority-primary"
+						update=":form " />
+
+				</h:panelGrid>
+			</p:panel>
+
+			<p:dataTable id="cars2"
+				value="#{informacaoVotoController.listaServidorUltimaIntencao}"
+				editable="true" editMode="cell" var="gu" style="text-align: center;"
+				paginator="true" rows="50"
+				currentPageReportTemplate="({currentPage} de {totalPages})"
+				paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+				rowsPerPageTemplate="50,100,200" rowKey="#{gu.id}"
+				paginatorAlwaysVisible="false"
+				emptyMessage="Nenhuma Servidor vinculado." reflow="true">
+				<f:facet name="header">
+		           Editável em linha.
+		       	</f:facet>
+
+				<p:ajax event="cellEdit"
+					listener="#{informacaoVotoController.onCellEdit}"
+					update=":form:growlMessage, :form:cars2" />
+
+				<p:column headerText="Servidor">
+					<h:outputText value="#{gu.servidor.pessoa.nome}" />
+				</p:column>
+
+				<p:column headerText="Precisão/Cor" width="150">
+					<p:cellEditor>
+						<f:facet name="output">
+							<p:rating value="#{gu.intencaoVoto.confianca}" />
+							<h:outputText value="#{gu.intencaoVoto.candidato.id}"
+								style="display: block; background-color: ##{gu.intencaoVoto.candidato.color}" />
+
+						</f:facet>
+						<f:facet name="input">
+							<p:rating value="#{gu.intencaoVoto.confianca}" style="width:96%"
+								valueChangeListener="#{informacaoVotoController.onValueQuantityChange}" />
+							<p:selectOneListbox id="advanced"
+								valueChangeListener="#{informacaoVotoController.onValueQuantityChange}"
+								value="#{gu.intencaoVoto.candidato}" converter="entityConverter"
+								var="t" filterMatchMode="contains">
+								<f:selectItems value="#{informacaoVotoController.candidatos}"
+									var="theme" itemLabel="#{theme.servidor.pessoa.nome}"
+									itemValue="#{theme}" />
+
+								<p:column>
+									<h:outputText value="XXXXXXXX"
+										style="background-color:##{t.color}; color:##{t.color}" />
+								</p:column>
+							</p:selectOneListbox>
+						</f:facet>
+					</p:cellEditor>
+				</p:column>
+			</p:dataTable>
+
+		</h:form>
+
+	</ui:define>
+</ui:composition>

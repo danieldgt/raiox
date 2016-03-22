@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="../template/template.xhtml">
+	<ui:define name="conteudo">
+		<h2>Cargo</h2>
+		<h:form id="form">
+			<p:growl id="growlMessage" autoUpdate="true" showDetail="true"
+				showSummary="true" />
+
+			<h:inputHidden value="#{cargoController.cargo.id}" />
+
+			<p:panel>
+				<h:panelGrid columns="2">
+
+					<h:outputText value="Descricao: " />
+					<p:inputText value="#{cargoController.cargo.dsCargo}" />
+
+					<p:commandButton value="Salvar" action="#{cargoController.save()}"
+						styleClass="ui-priority-primary"
+						update=":form:growlMessage, :form " />
+
+					<p:commandButton value="Limpar"
+						action="#{cargoController.limpar()}"
+						update=":form:growlMessage, :form " />
+
+				</h:panelGrid>
+			</p:panel>
+
+			<p:dataTable id="dt" value="#{cargoController.cargos}" var="gu"
+				lazy="true" style="text-align: center;" paginator="true" rows="5"
+				currentPageReportTemplate="({currentPage} de {totalPages})"
+				paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+				rowsPerPageTemplate="5,10,15" paginatorPosition="bottom"
+				rowKey="#{gu.id}" paginatorAlwaysVisible="false"
+				emptyMessage="Nenhum usuário cadastrado." reflow="true">
+
+				<p:column headerText="Id" sortBy="#{gu.id}"
+					filterMatchMode="contains">
+					<h:outputText value="#{gu.id}" />
+				</p:column>
+
+				<p:column headerText="Descricao" sortBy="#{gu.dsCargo}"
+					filterBy="#{gu.dsCargo}" filterMatchMode="contains">
+					<h:outputText value="#{gu.dsCargo}" />
+				</p:column>
+
+				<p:column headerText="Ações">
+					<p:commandButton action="#{cargoController.edit()}"
+						icon="ui-icon-pencil" update=":form:growlMessage, :form:dt, :form"
+						value="Editar">
+						<f:setPropertyActionListener value="#{gu}"
+							target="#{cargoController.cargo}" />
+					</p:commandButton>
+
+					<p:commandButton action="#{cargoController.delete()}"
+						icon="ui-icon-trash" update=":form:growlMessage, :form:dt, :form"
+						value="Excluir">
+						<f:setPropertyActionListener value="#{gu}"
+							target="#{cargoController.cargo}" />
+					</p:commandButton>
+				</p:column>
+
+
+				<f:facet name="footer">  
+			            #{cargoController.tamanhoLista()} Cargo(s) Cadastrado(s).  
+			        </f:facet>
+
+			</p:dataTable>
+		</h:form>
+
+	</ui:define>
+</ui:composition>

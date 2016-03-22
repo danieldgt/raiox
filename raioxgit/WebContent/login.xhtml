@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+	<h:head>
+		<f:facet name="first">
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width" />
+			<meta name="mobile-web-app-capable" content="yes" />
+			<meta name="description" content="" />
+			<meta name="author" content="ET" />
+			<meta name="mobile-web-app-capable" content="yes" />
+			<meta name="apple-mobile-web-app-capable" content="yes" />
+		</f:facet>
+
+		<meta charset="UTF-8" />
+		<title>Xxxxxxxx</title>
+
+		<link rel="stylesheet" href="#{request.contextPath}/resources/css/reset.css" />
+
+		<link rel="stylesheet" href="#{request.contextPath}/css/style.css" />
+	</h:head>
+
+	<h:body>
+
+		<p:growl id="growlMessage" autoUpdate="true" showDetail="true"
+			showSummary="true" />
+		<h:form>
+			<div class="wrap">
+				<div class="avatar">
+					<img
+						src="#{request.contextPath}/resources/images/iconpopmania-179.jpg" />
+				</div>
+				<p:inputText id="loginEmail" type="text" placeholder="login"
+					value="#{usuarioLogado.login}" />
+				<div class="bar">
+					<i></i>
+				</div>
+				<p:password type="password" id="loginPassword"
+					styleClass="form-control" placeholder="Senha"
+					value="#{usuarioLogado.senha}" />
+				<a href="" class="forgot_link">forgot ?</a>
+				<p:commandButton id="mycommandLinkIDlogin" type="submit"
+					styleClass="btn btn-lg btn-login btn-block" value="Login"
+					action="#{usuarioLogado.doLogin}" />
+			</div>
+		</h:form>
+
+		<p:ajaxStatus
+			style="width:64px;height:64px;position:fixed;right:20px;bottom:30px">
+			<f:facet name="start">
+				<h:graphicImage library="images" name="loading.gif" />
+			</f:facet>
+
+			<f:facet name="complete">
+				<h:outputText value="" />
+			</f:facet>
+		</p:ajaxStatus>
+
+
+		<script src="js/index.js"></script>
+
+
+
+	</h:body>
+
+</f:view>
+
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+	<h:form id="formMenu">
+		<p:menu style="width:200px; height: 400px">
+			<p:submenu label="Creditos de impressao">
+				<p:menuitem value="Gerenciar creditos" update="messages" />
+			</p:submenu>
+			<p:submenu label="Relatorios">
+				<p:menuitem value="Resumo diario" update="messages" ajax="false" />
+				<p:menuitem value="Resumo por operador" update="messages"
+					ajax="false" />
+				<p:menuitem value="Creditos por aluno" update="messages"
+					ajax="false" />
+				<p:menuitem value="Impressoes por aluno" update="messages"
+					ajax="false" />
+				<p:menuitem value="Impressoes por impressora" update="messages"
+					ajax="false" />
+				<p:menuitem value="Creditos por reprografia" update="messages"
+					ajax="false" />
+				<p:menuitem value="Creditos por periodo" update="messages"
+					ajax="false" />
+			</p:submenu>
+			<p:submenu label="Ferramentas">
+				<p:menuitem value="Gerenciar operador" update="messages"
+					ajax="false" />
+				<p:menuitem value="Modo administrador" update="messages"
+					ajax="false" />
+			</p:submenu>
+		</p:menu>
+	</h:form>
+</h:body>
+</html>
